@@ -14,10 +14,6 @@ function App() {
   const handleMouseDown = () => setIsPressed(true);
   const handleMouseUp = () => setIsPressed(false);
 
-  const openGithub = () => {
-    window.open('https://github.com/Malith-Rukshan/NotCoin-Mini-App-Clone');
-  };
-
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (energy - energyToReduce < 0) {
       return;
@@ -69,32 +65,12 @@ function App() {
 
 
         <div className="fixed bottom-0 left-0 w-full px-6 pb-8 z-10">
-          <div className="w-full flex justify-between gap-2">
-            <div className="w-1/3 flex items-center justify-start max-w-32">
-              <div className="flex items-center justify-center">
-                <img src='./images/high-voltage.png' width={44} height={44} alt="High Voltage" />
-                <div className="ml-2 text-left">
-                  <span className="text-white text-2xl font-bold block">{energy}</span>
-                  <span className="text-white text-large opacity-75">/ 6500</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex-grow flex items-center max-w-60 text-sm">
-              <div className="w-full bg-[#fad258] py-4 rounded-2xl flex justify-around">
-                <button className="flex flex-col items-center gap-1" onClick={openGithub}>
-                  <img src='./images/bear.png' width={24} height={24} alt="High Voltage"/>
-                  <span>Frens</span>
-                </button>
-                <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
-                <button className="flex flex-col items-center gap-1" onClick={openGithub}>
-                  <img src='./images/coin.png' width={24} height={24} alt="High Voltage" />
-                  <span>Earn</span>
-                </button>
-                <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
-                <button className="flex flex-col items-center gap-1" onClick={openGithub}>
-                  <img src='./images/rocket.png' width={24} height={24} alt="High Voltage" />
-                  <span>Boosts</span>
-                </button>
+          <div className="w-full flex justify-center">
+            <div className="flex items-center justify-center">
+              <img src='./images/high-voltage.png' width={44} height={44} alt="High Voltage" />
+              <div className="ml-2 text-left">
+                <span className="text-white text-2xl font-bold block">{energy}</span>
+                <span className="text-white text-large opacity-75">/ 6500</span>
               </div>
             </div>
           </div>
